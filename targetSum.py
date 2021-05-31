@@ -4,11 +4,11 @@ def findSum(array,sumTarget):
     for number in array:
         complement = sumTarget - number
         if(complement in numberDict):
-            return [number,complement]  
+            return [complement,number]  
         else:
             numberDict[number] = None
     return None
 
-
+print(findSum([2,7,11,15],9))
 
 
