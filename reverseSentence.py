@@ -2,6 +2,10 @@ import re
 
 
 def reverseSentence(sentenceToBeReversed):
+    sentenceHasNewline = False
+    if(len(sentenceToBeReversed) > 0):
+        if sentenceToBeReversed[len(sentenceToBeReversed)-1] == '\n':
+            sentenceHasNewline = True
     splitWords = re.split('\s',sentenceToBeReversed)
 
     splitWords.reverse()
@@ -14,7 +18,8 @@ def reverseSentence(sentenceToBeReversed):
         newSentence += splitWords[i]
         if(i != len(splitWords)-1):      #If we're not at the last word
             newSentence += " "
-    newSentence += '\n'
+    if sentenceHasNewline:
+        newSentence += '\n'
     return newSentence
 
 def main():
