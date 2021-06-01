@@ -23,7 +23,7 @@ def reverseSentence(sentenceToBeReversed):
     return newSentence
 
 def main():
-    userInput = input('Please enter a sentence with multiple words to be revsered:')
+    userInput = input('Please enter a sentence with multiple words to be reversed:')
     reversedInput = reverseSentence(userInput)
     print("That sentence reversed is:",reversedInput)
 
